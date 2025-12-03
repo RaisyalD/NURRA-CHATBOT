@@ -1,11 +1,12 @@
 "use client"
 
+// Force dynamic rendering to prevent static generation errors
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 import type React from "react"
 
 import { useEffect, useState } from "react"
-
-// Force dynamic rendering to prevent static generation errors
-export const dynamic = 'force-dynamic'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"

@@ -1,5 +1,9 @@
 "use client"
 
+// Force dynamic rendering to prevent static generation errors
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 // Import komponen-komponen yang diperlukan
 import { ChatInterface } from "@/components/chat-interface"
 import { Sidebar } from "@/components/sidebar"
@@ -7,9 +11,6 @@ import { Header } from "@/components/header"
 import { AuthGuard } from "@/components/auth-guard"
 import { ClientWrapper } from "@/components/client-wrapper"
 import { useState } from "react"
-
-// Force dynamic rendering to prevent static generation errors
-export const dynamic = 'force-dynamic'
 
 // Komponen utama untuk halaman home/dashboard
 export default function HomePage() {
